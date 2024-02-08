@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meeting Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .meeting-info {
+        margin-top: 30px;
+      }
+      .meeting-info p {
+        margin: 10px 0;
+      }
+      .meeting-link {
+        text-align: center;
+      }
+      .meeting-link a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Meeting Details</h1>
+      <div class="meeting-info">
+        <p><strong>Start Time:</strong><%= startTime %>(IST)</p>
+        <p><strong>Duration:</strong> <%= duration %> mins</p>
+        <p><strong>Purpose:</strong> <%= purpose %></p>
+        <p><strong>Passcode:</strong> <%= password %></p>
+      </div>
+      <div class="meeting-link">
+        <a href="<%= join_url %>" target="_blank">Meeting Link</a>
+      </div>
+    </div>
+  </body>
+</html>
